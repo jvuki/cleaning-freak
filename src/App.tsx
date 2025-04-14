@@ -1,26 +1,18 @@
-import { Mail, Phone } from "lucide-react";
-import work from "./assets/images/working.jpg";
-import "./App.css";
+import Header from "./components/header";
+import showcase from './assets/showcase.png'
+import WhoAreWe from "./sections/who-are-we";
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center gap-10 p-5">
-      <h1 className="text-2xl">Cleaning Freak coming soon...</h1>
-      <div className="flex flex-row gap-5">
-        <Mail />
-        <a
-          href="mailto:cleaningfreak.hr@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          cleaningfreak.hr@gmail.com
-        </a>
+    <div className="flex flex-col">
+      <Header />
+      <div className="relative">
+        <img className="aspect-16/9 object-cover" src={showcase} />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#4F1F4F]/70 px-4 py-2 rounded">
+         <h1 className="font-encode text-3xl text-[#DCCDE2] text-center">Čistoća na FREAK nivou!</h1>
       </div>
-      <div className="flex flex-row gap-5">
-        <Phone />
-        <a href="tel:+385 95 555 9119">+385 95 555 9119</a>
       </div>
-      <img className="aspect-16/9 object-contain w-full" src={work} />
+      <WhoAreWe/>
     </div>
   );
 }

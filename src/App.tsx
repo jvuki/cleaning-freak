@@ -2,7 +2,6 @@ import Header from "./components/header";
 import showcase from "./assets/showcase.png";
 import WhoAreWe from "./sections/who-are-we";
 import MissionAndVision from "./sections/mission-and-vision";
-import Offer from "./sections/offer";
 
 function App() {
   return (
